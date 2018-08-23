@@ -21,6 +21,7 @@ export default class AcctView extends React.Component {
         this.logOut = this.logOut.bind(this);
     }
 
+    //waits to ensure the component mounts then pulls the data from local storage
     componentDidMount() {
         var self = this;
         let data = JSON.parse(localStorage.getItem('users'));
@@ -40,6 +41,7 @@ export default class AcctView extends React.Component {
         })
     };
 
+    //adds funds to the account
     addFunds() {
         swal({
             title: 'Add Funds!',
@@ -64,6 +66,7 @@ export default class AcctView extends React.Component {
         });
     };
 
+    //withdraws funds to the account
     withDrawFunds() {
         swal({
             title: 'Withdraw Funds!',
@@ -88,6 +91,7 @@ export default class AcctView extends React.Component {
         });
     };
 
+    //updates local storage with the new info then logs out
     logOut() {
         var data = JSON.parse(localStorage.getItem('users'));
 

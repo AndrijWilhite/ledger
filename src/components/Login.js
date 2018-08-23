@@ -29,6 +29,7 @@ class Login extends React.Component {
     this.handleLogOut = this.handleLogOut.bind(this);
   }
 
+  //handles input and state change for login fields
   handleChange(e) {
     const target = e.target;
     const value = target.value;
@@ -39,6 +40,7 @@ class Login extends React.Component {
     });
   }
 
+  //handles the login functionality
   handleSubmit(e) {
     var self = this;
     e.preventDefault();
@@ -65,6 +67,7 @@ class Login extends React.Component {
     })
   };
 
+  //creates account
   handleCreateAccount() {
     swal.mixin({
       input: 'text',
